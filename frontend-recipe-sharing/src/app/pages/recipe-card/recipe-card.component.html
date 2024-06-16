@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <img mat-card-avatar src="" alt="">
+      <mat-card-title>{{recipe.user.fullName}}</mat-card-title>
+      <mat-card-subtitle>code_with_zero</mat-card-subtitle>
+    </mat-card-header>
+    <img class="max-h-[400px] object-cover" mat-card-image [src]="recipe.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{recipe.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="flex justify-between">
+      <div>
+        <button mat-icon-button aria-label="Example icon button with a home icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+
+        <button (click)="handleOpenEditRecipeForm()" mat-icon-button aria-label="Example icon button with a home icon">
+          <mat-icon>edit</mat-icon>
+        </button>
+
+        <button mat-icon-button aria-label="Example icon button with a home icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </div>
+
+      <div>
+        <button (click)="handleDeleteRecipe()" mat-icon-button aria-label="Example icon button with a home icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+  
